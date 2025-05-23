@@ -1,0 +1,19 @@
+# Node modules
+**/node_modules/
+
+# Python
+*.pyc
+__pycache__/
+
+# VSCode settings
+.vscode/
+
+# Env files
+*.env
+
+# Build files
+**/build/
+**/dist/
+
+# DB files
+*.sqlite3
