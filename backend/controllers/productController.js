@@ -13,7 +13,7 @@ const addProduct = async (req, res) => {
         const image4 = req.files.image4 && req.files.image4[0]
 
         const images = [image1, image2, image3, image4].filter((item) => item !== undefined)
-
+        //store all these images in cloudinary there we get the url link
         let imagesUrl = await Promise.all(
             images.map(async (item) => {
                 let result = await cloudinary.uploader.upload(item.path, { resource_type: 'image' });
@@ -49,8 +49,9 @@ const addProduct = async (req, res) => {
 // function for list product
 const listProducts = async (req, res) => {
     try {
-        
+        console.log("Listing Products...");
         const products = await productModel.find({});
+        console.log(products); 
         res.json({success:true,products})
 
     } catch (error) {

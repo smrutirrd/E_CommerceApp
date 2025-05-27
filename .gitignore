@@ -1,19 +1,25 @@
-# Node modules
-**/node_modules/
+# Node.js
+node_modules/
+npm-debug.log*
 
-# Python
-*.pyc
-__pycache__/
+# Environment variables
+.env
+.env.local
 
-# VSCode settings
+# VSCode
 .vscode/
 
-# Env files
-*.env
+# Build output
+dist/
+build/
 
-# Build files
-**/build/
-**/dist/
+# OS
+.DS_Store
+Thumbs.db
 
-# DB files
-*.sqlite3
+# Logs
+logs
+*.log
+
+# Mongo
+dump/
